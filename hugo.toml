@@ -1,0 +1,25 @@
+baseURL = "https://hidlayers-workshop.github.io/"
+languageCode = "en-us"
+title = "HIDDEN LAYERS Workshop"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "HIDDEN LAYERS (Research Meets Practice): Enterprise Risk, AI Forensics, and Image Security"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Call for Papers"
+    pageRef = "/call-for-papers"
+    weight = 2
+  [[menu.main]]
+    name = "Committee"
+    pageRef = "/committee"
+    weight = 3
+  [[menu.main]]
+    name = "EDOC"
+    url = "https://conf.researchr.org/home/cbi-edoc-2026"
+    weight = 4

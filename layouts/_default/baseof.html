@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}
+    </title>
+    <meta name="description" content="{{ .Site.Params.description }}" />
+    <link rel="stylesheet" href="{{ "css/site.css" | relURL }}" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="{{ "/" | relURL }}">Hidden Layers Workshop</a>
+        <nav class="menu" aria-label="Main menu">
+          {{ range .Site.Menus.main }}
+            <a
+              class="menu-item {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}active{{ end }}"
+              href="{{ .URL }}"
+            >
+              {{ .Name }}
+            </a>
+          {{ end }}
+        </nav>
+      </div>
+    </header>
+
+    <main class="container content-wrap">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© {{ now.Year }} Hidden Layers Workshop</small>
+      </div>
+    </footer>
+  </body>
+</html>
