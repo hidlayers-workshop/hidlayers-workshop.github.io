@@ -23,6 +23,19 @@
             </a>
           {{ end }}
         </nav>
+        <details class="mobile-menu">
+          <summary>Menu</summary>
+          <nav class="mobile-menu-panel" aria-label="Mobile menu">
+            {{ range .Site.Menus.main }}
+              <a
+                class="menu-item {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}active{{ end }}"
+                href="{{ .URL }}"
+              >
+                {{ .Name }}
+              </a>
+            {{ end }}
+          </nav>
+        </details>
       </div>
     </header>
 

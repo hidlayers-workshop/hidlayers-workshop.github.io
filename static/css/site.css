@@ -52,6 +52,10 @@ body {
   flex-wrap: wrap;
 }
 
+.mobile-menu {
+  display: none;
+}
+
 .menu-item {
   color: var(--muted);
   text-decoration: none;
@@ -129,4 +133,48 @@ h1 {
   color: var(--muted);
   background: var(--surface);
   padding: 1rem 0 1.6rem;
+}
+
+@media (max-width: 760px) {
+  .menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .mobile-menu summary {
+    list-style: none;
+    cursor: pointer;
+    color: var(--accent);
+    font-weight: 600;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--accent-soft);
+  }
+
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-menu-panel {
+    position: absolute;
+    right: 4vw;
+    margin-top: 0.45rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.45rem;
+    min-width: 200px;
+    z-index: 20;
+  }
+
+  .mobile-menu-panel .menu-item {
+    border-radius: 8px;
+  }
 }

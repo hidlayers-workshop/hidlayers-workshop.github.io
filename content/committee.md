@@ -1,7 +1,7 @@
 ---
 title: "Committee"
 ---
-The committee will include experts from academia and industry in enterprise risk, AI forensics, cybersecurity, and image security.
+The committees are the experts from academia and industry in enterprise risk, AI forensics, cybersecurity, and image security.
 
 ## Workshop Co-Chairs
 
