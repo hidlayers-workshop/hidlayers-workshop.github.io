@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <section class="hero">
+    <p class="eyebrow">Hidden Layers Workshop</p>
+    <h1>{{ .Title }}</h1>
+    <p class="lead">{{ .Content }}</p>
+  </section>
+
+  <section class="grid">
+    <article class="card">
+      <h2>Call for Papers</h2>
+      <p>Find important dates, submission format, and review criteria.</p>
+      <a href="{{ "/call-for-papers/" | relURL }}">Read details</a>
+    </article>
+
+    <article class="card">
+      <h2>Committee</h2>
+      <p>Meet the organizing committee and program committee members.</p>
+      <a href="{{ "/committee/" | relURL }}">View committee</a>
+    </article>
+
+    <article class="card">
+      <h2>EDOC</h2>
+      <p>See how this workshop connects to the EDOC conference series.</p>
+      <a href="https://conf.researchr.org/home/cbi-edoc-2026">Explore EDOC</a>
+    </article>
+  </section>
+{{ end }}
