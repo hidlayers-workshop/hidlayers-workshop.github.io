@@ -1,27 +1,130 @@
 {{ define "main" }}
-  <section class="hero">
-    <p class="eyebrow">Hidden Layers Workshop</p>
-    <h1>{{ .Title }}</h1>
-    <p class="lead">{{ .Content }}</p>
-  </section>
 
-  <section class="grid">
-    <article class="card">
-      <h2>Call for Papers</h2>
-      <p>Find important dates, submission format, and review criteria.</p>
-      <a href="{{ "/call-for-papers/" | relURL }}">Read details</a>
-    </article>
+<!-- Hero Banner Section -->
+<section class="hero-banner">
+  <!-- Navigation menu inside the hero banner on top right -->
+  <nav class="hero-menu">
+    <a href="#home" class="menu-item active">Home</a>
+    <a href="#call-for-papers" class="menu-item">Call for Papers</a>
+    <a href="#committee" class="menu-item">Committee</a>
+    <a href="#spread-the-world" class="menu-item">Spread the World</a>
+    <a href="#edoc" class="menu-item">EDOC</a>
+  </nav>
 
-    <article class="card">
-      <h2>Committee</h2>
-      <p>Meet the organizing committee and program committee members.</p>
-      <a href="{{ "/committee/" | relURL }}">View committee</a>
-    </article>
+  <!-- Hero content -->
+  <div class="hero-banner-content">
+    <h1>1<sup>st</sup> European Workshop on</h1>
+    <h2>Hidden Layers: Enterprise Risk, AI Forensics, and Image Security</h2>
+    <p><strong>September 15-18, 2026 — University of Twente, The Netherlands</strong></p>
+    <p>Held in conjunction with the EDOC conference series</p>
+  </div>
+</section>
 
-    <article class="card">
-      <h2>EDOC</h2>
-      <p>See how this workshop connects to the EDOC conference series.</p>
-      <a href="https://conf.researchr.org/home/cbi-edoc-2026">Explore EDOC</a>
-    </article>
-  </section>
+<!-- Home / optional intro -->
+<section id="home" class="content-section">
+  {{ with .Content }}
+    {{ . }}
+  {{ end }}
+</section>
+
+<!-- Call for Papers -->
+<section id="call-for-papers" class="content-section">
+  <h2>Call for Papers</h2>
+  <p>We invite original research and industry papers for the 1st edition of <strong>HIDDEN LAYERS (Research Meets Practice): Enterprise Risk, AI Forensics, and Image Security</strong>.</p>
+
+  <p>This workshop bridges academic research with practical applications, emphasizing enterprise image security and forensic AI.</p>
+
+  <h3>Workshop Topics</h3>
+  <ul>
+    <li>Enterprise cybersecurity challenges</li>
+    <li>Threat modeling and mitigation strategies</li>
+    <li>Governance, compliance, and risk management</li>
+    <li>Deployment and evaluation of forensic frameworks</li>
+    <li>Industry case studies highlighting real-world risks and mitigation approaches</li>
+    <li>Human-centric threats such as social engineering, insider threats, and cybercrime affecting organizational security</li>
+  </ul>
+
+  <p>Technical advances in AI forensics and image security include:</p>
+  <ul>
+    <li>AI-based forensic methods</li>
+    <li>Deep learning & anomaly detection for forensic analysis</li>
+    <li>Validation and robustness of forensic AI</li>
+    <li>Attacks against AI systems</li>
+    <li>Image & digital media security:
+      <ul>
+        <li>Image steganography & steganalysis</li>
+        <li>Detection of hidden or malicious content (e.g., stego-malware)</li>
+        <li>Deepfakes and fake news</li>
+        <li>AI-generated images</li>
+        <li>Biometric security</li>
+        <li>Privacy-preserving AI techniques</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Application Domains</h3>
+  <p>We welcome empirical research papers, experience reports, and case studies from all domains.</p>
+
+  <h3>Submission Types</h3>
+  <ul>
+    <li>Short Papers (4 pages)</li>
+    <li>Position Papers (4 pages)</li>
+    <li>Full Papers (8 pages)</li>
+    <li>Industry Reports (4 pages)</li>
+  </ul>
+
+  <h3>Workshop Venue</h3>
+  <p>The workshop will be held in conjunction with <strong>EDOC/CBI 2026</strong> (Sept 15–18, 2026, University of Twente).</p>
+  <p>EDOC link: <a href="https://conf.researchr.org/home/cbi-edoc-2026">Explore EDOC</a></p>
+
+  <h3>Important Dates</h3>
+  <ul>
+    <li>Paper submission: TBA</li>
+    <li>Notification: TBA</li>
+    <li>Camera-ready: TBA</li>
+    <li>Workshop: TBA</li>
+  </ul>
+</section>
+
+<!-- Committee -->
+<section id="committee" class="content-section">
+  <h2>Committee</h2>
+  <p>The committees are experts from academia and industry in enterprise risk, AI forensics, cybersecurity, and image security.</p>
+
+  <h3>Workshop Co-Chairs</h3>
+  <ul>
+    <li>
+      <strong>Dipti K. Sarmah</strong> – Docent at the University of Twente, The Netherlands. Research on image steganography, cryptography-steganography fusion, secure authentication, phishing, social engineering, and applied cybersecurity.
+    </li>
+    <li>
+      <strong>I Putu Arya Dharmaadi</strong> – PhD researcher at the University of Groningen, The Netherlands. Focus on fuzzing, automated testing, and web security.
+    </li>
+    <li>
+      <strong>Marianne Junger</strong> – Emeritus Professor at the University of Twente. Research on human factors of fraud and cybercrime.
+    </li>
+    <li>
+      <strong>Claudia Negri Ribalta</strong> – Research associate at Interdisciplinary Research Group in Socio-technical Cybersecurity, Luxembourg. Focus on data protection and socio-technical cybersecurity.
+    </li>
+  </ul>
+
+  <h3>Program Committee</h3>
+  <ul>
+    <li>To be announced</li>
+    <!-- Replace with actual members once you have the list -->
+  </ul>
+</section>
+
+<!-- Spread the World -->
+<section id="spread-the-world" class="content-section">
+  <h2>Spread the World</h2>
+  <p>Help us promote the workshop! Share via social media, mailing lists, and networks.</p>
+</section>
+
+<!-- EDOC -->
+<section id="edoc" class="content-section">
+  <h2>EDOC</h2>
+  <p>See how this workshop connects to the EDOC conference series.</p>
+  <a href="https://conf.researchr.org/home/cbi-edoc-2026">Explore EDOC</a>
+</section>
+
 {{ end }}

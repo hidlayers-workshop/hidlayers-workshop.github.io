@@ -10,37 +10,50 @@
     <link rel="stylesheet" href="{{ "css/site.css" | relURL }}" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="{{ "/" | relURL }}">Hidden Layers Workshop</a>
-        <nav class="menu" aria-label="Main menu">
-          {{ range .Site.Menus.main }}
-            <a
-              class="menu-item {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}active{{ end }}"
-              href="{{ .URL }}"
-            >
-              {{ .Name }}
-            </a>
-          {{ end }}
-        </nav>
-        <details class="mobile-menu">
-          <summary>Menu</summary>
-          <nav class="mobile-menu-panel" aria-label="Mobile menu">
-            {{ range .Site.Menus.main }}
-              <a
-                class="menu-item {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}active{{ end }}"
-                href="{{ .URL }}"
-              >
-                {{ .Name }}
-              </a>
-            {{ end }}
-          </nav>
-        </details>
-      </div>
-    </header>
+    <!-- Remove the old site-header menu -->
+    <!-- <header class="site-header"> ... </header> -->
 
     <main class="container content-wrap">
-      {{ block "main" . }}{{ end }}
+      {{ block "main" . }}
+      <!-- HERO BANNER WITH MENU INSIDE -->
+      <section class="hero-banner">
+        <nav class="hero-banner-nav">
+          <a href="{{ "/" | relURL }}" class="home">Home</a>
+          <a href="{{ "/call-for-papers/" | relURL }}">Call for Papers</a>
+          <a href="{{ "/committee/" | relURL }}">Committee</a>
+          <a href="{{ "/spread-the-world/" | relURL }}">Spread the World</a>
+          <a href="{{ "/edoc/" | relURL }}">EDOC</a>
+        </nav>
+
+        <div class="hero-banner-content">
+          <h1>1<sup>st</sup> European Workshop on</h1>
+          <h2>Hidden Layers: Enterprise Risk, AI Forensics, and Image Security</h2>
+          <p><strong>September 15–18, 2026 — University of Twente, The Netherlands</strong></p>
+          <p>Held in conjunction with the EDOC conference series</p>
+        </div>
+      </section>
+
+      <!-- GRID CARDS -->
+      <section class="grid">
+        <article class="card">
+          <h2>Call for Papers</h2>
+          <p>Find important dates, submission format, and review criteria.</p>
+          <a href="{{ "/call-for-papers/" | relURL }}">Read details</a>
+        </article>
+
+        <article class="card">
+          <h2>Committee</h2>
+          <p>Meet the organizing committee and program committee members.</p>
+          <a href="{{ "/committee/" | relURL }}">View committee</a>
+        </article>
+
+        <article class="card">
+          <h2>EDOC</h2>
+          <p>See how this workshop connects to the EDOC conference series.</p>
+          <a href="https://conf.researchr.org/home/cbi-edoc-2026">Explore EDOC</a>
+        </article>
+      </section>
+      {{ end }}
     </main>
 
     <footer class="site-footer">

@@ -1,6 +1,6 @@
 baseURL = "https://hidlayers-workshop.github.io/"
 languageCode = "en-us"
-title = "HIDDEN LAYERS Workshop"
+title = "HIDDEN LAYERS(Research Meets Practice) Workshop"
 disableKinds = ["taxonomy", "term"]
 
 [params]

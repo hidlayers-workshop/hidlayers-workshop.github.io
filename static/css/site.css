@@ -4,12 +4,17 @@
   --text: #1f2a37;
   --muted: #526174;
   --border: #d8e4f2;
-  --accent: #2d73ff;
-  --accent-soft: #e9f1ff;
+  --accent: #ff2d2d; /* red for links/highlight */
+  --accent-soft: #ffe9e9;
 }
 
+/* Global styles */
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,191 +26,108 @@ body {
 }
 
 .container {
-  width: min(980px, 92vw);
+  width: 90vw; /* same width as hero image content */
+  max-width: 980px;
   margin: 0 auto;
 }
 
-.site-header {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
+/* Hero Banner */
+.hero-banner {
+  width: 100vw;
+  height: 100vh; /* full screen height */
+  margin-left: calc(50% - 50vw); /* full width, remove extra white space */
+  margin-right: calc(50% - 50vw);
+  background-image: url('/images/banner1.jpg'); /* replace with your image */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center; /* horizontal center */
+  text-align: center;
+  color: white;
+  padding: 0 1rem;
 }
 
-.nav-wrap {
+/* Overlay for readability */
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
+/* Hero text content */
+.hero-banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+/* Hero menu on top right */
+.hero-menu {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
   display: flex;
   gap: 1rem;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.85rem 0;
+  z-index: 2;
 }
 
-.brand {
-  color: var(--text);
+.hero-menu .menu-item {
+  color: white;
   text-decoration: none;
-  font-weight: 700;
-}
-
-.menu {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.mobile-menu {
-  display: none;
-}
-
-.menu-item {
-  color: var(--muted);
-  text-decoration: none;
-  padding: 0.35rem 0.7rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
   border-radius: 999px;
+  background: rgba(0,0,0,0.3);
+  transition: 0.3s;
 }
 
-.menu-item:hover,
-.menu-item.active {
-  background: var(--accent-soft);
-  color: var(--accent);
+.hero-menu .menu-item:hover,
+.hero-menu .menu-item.active {
+  background: var(--accent);
+  color: var(--surface);
 }
 
-.content-wrap {
-  padding: 2rem 0 2.4rem;
-}
-
-.hero {
+/* Content sections below hero */
+.content-section {
   background: var(--surface);
-  border: 1px solid var(--border);
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  max-width: 900px; /* same width as hero content */
   border-radius: 16px;
-  padding: 1.6rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
 }
 
-.eyebrow {
-  color: var(--accent);
-  font-size: 0.86rem;
-  font-weight: 600;
-  margin: 0 0 0.4rem;
-}
-
-h1 {
-  margin: 0;
-  line-height: 1.2;
-}
-
-.lead {
-  margin-top: 0.8rem;
-  color: var(--muted);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0.9rem;
-}
-
-.card,
-.page {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1.2rem;
-}
-
-.card h2,
-.page h1 {
+.content-section h2 {
   margin-top: 0;
+  color: var(--text);
 }
 
-.card p,
-.page-content {
-  color: var(--muted);
-}
-
-.card a {
+.content-section a {
   color: var(--accent);
   text-decoration: none;
   font-weight: 600;
 }
 
-.site-footer {
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  background: var(--surface);
-  padding: 1rem 0 1.6rem;
+.content-section a:hover {
+  text-decoration: underline;
 }
 
+/* Mobile responsiveness */
 @media (max-width: 760px) {
-  .menu {
-    display: none;
-  }
-
-  .mobile-menu {
-    display: block;
-  }
-
-  .mobile-menu summary {
-    list-style: none;
-    cursor: pointer;
-    color: var(--accent);
-    font-weight: 600;
-    padding: 0.3rem 0.7rem;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    background: var(--accent-soft);
-  }
-
-  .mobile-menu summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .mobile-menu-panel {
-    position: absolute;
-    right: 4vw;
-    margin-top: 0.45rem;
-    display: flex;
+  .hero-menu {
     flex-direction: column;
-    gap: 0.2rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 0.45rem;
-    min-width: 200px;
-    z-index: 20;
+    top: 1rem;
+    right: 1rem;
   }
 
-  .mobile-menu-panel .menu-item {
-    border-radius: 8px;
+  .content-section {
+    padding: 1rem;
   }
-.hero-banner {
-    background-image: url('/images/forensic-lab.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 6rem 2rem;
-    text-align: center;
-    color: white;
-    position: relative;
 }
-
-.hero-banner::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-}
-
-.hero-banner-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-banner h1 {
-    font-size: 3rem;
-    margin: 0.5rem 0;
-}
-
-.hero-banner p {
-    font-size: 1.2rem;
-    margin: 0.3rem 0;
-}
-

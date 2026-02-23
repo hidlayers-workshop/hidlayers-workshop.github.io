@@ -7,9 +7,28 @@ This workshop aims to bridge academic research with practical applications, with
 
 ## Workshop Topics
 
-The workshop primarily focuses on enterprise risk in the context of AI-enabled and media-rich enterprise systems. Topics of interest include enterprise cybersecurity challenges, threat modeling and mitigation strategies, governance, compliance, and risk management, as well as the deployment and evaluation of forensic frameworks in enterprise environments. We welcome industry case studies that highlight real-world risks, vulnerabilities, and mitigation approaches, including human-centric threats such as social engineering, insider threats, and broader cybercrime activities that impact organizational security and resilience.
+The workshop primarily focuses on enterprise risk in the context of AI-enabled and media-rich enterprise systems. Topics of interest include:
 
-Building on this enterprise risk perspective, the workshop also covers technical advances in AI forensics and image security as key mechanisms for risk detection and investigation. Relevant topics include AI-based forensic methods, deep learning and anomaly detection for forensic analysis and enterprise risk detection, validation and robustness of forensic AI, and attacks against AI systems. We further invite contributions on image and digital media security, such as image steganography and steganalysis, detection of hidden or malicious content (e.g., stego-malware), deepfakes, fake news, AI-generated images, biometric security, and privacy-preserving AI techniques.
+- Enterprise cybersecurity challenges
+- Threat modeling and mitigation strategies
+- Governance, compliance, and risk management
+- Deployment and evaluation of forensic frameworks in enterprise environments
+- Industry case studies highlighting real-world risks, vulnerabilities, and mitigation approaches
+- Human-centric threats such as social engineering, insider threats, and broader cybercrime activities that impact organizational security and resilience
+
+Building on this enterprise risk perspective, the workshop also covers technical advances in AI forensics and image security, including:
+
+- AI-based forensic methods
+- Deep learning and anomaly detection for forensic analysis and enterprise risk detection
+- Validation and robustness of forensic AI
+- Attacks against AI systems
+- Image and digital media security such as:
+  - Image steganography and steganalysis
+  - Detection of hidden or malicious content (e.g., stego-malware)
+  - Deepfakes and fake news
+  - AI-generated images
+  - Biometric security
+  - Privacy-preserving AI techniques
 
 ## Application Domains
 
