@@ -37,7 +37,7 @@ body {
   height: 100vh; /* full screen height */
   margin-left: calc(50% - 50vw); /* full width, remove extra white space */
   margin-right: calc(50% - 50vw);
-  background-image: url('/images/banner1.jpg'); /* replace with your image */
+  background-image: url('/images/banner2.jpg'); /* replace with your image */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
