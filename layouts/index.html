@@ -3,12 +3,25 @@
 <!-- Hero Banner Section -->
 <section class="hero-banner">
   <!-- Navigation menu inside the hero banner on top right -->
-  <nav class="hero-menu">
-    <a href="#home" class="menu-item active">Home</a>
-    <a href="#call-for-papers" class="menu-item">Call for Papers</a>
-    <a href="#committee" class="menu-item">Committee</a>
-    <a href="#spread-the-world" class="menu-item">Spread the World</a>
-    <a href="#edoc" class="menu-item">EDOC</a>
+  <nav class="hero-menu" aria-label="Section navigation">
+    <button
+      type="button"
+      class="menu-toggle"
+      aria-expanded="false"
+      aria-controls="hero-menu-links"
+      aria-label="Toggle menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div id="hero-menu-links" class="hero-menu-links">
+      <a href="#home" class="menu-item active">Home</a>
+      <a href="#call-for-papers" class="menu-item">Call for Papers</a>
+      <a href="#committee" class="menu-item">Committee</a>
+      <a href="#spread-the-world" class="menu-item">Spread the World</a>
+      <a href="#edoc" class="menu-item">EDOC</a>
+    </div>
   </nav>
 
   <!-- Hero content -->
@@ -17,10 +30,34 @@
     <h2>Hidden Layers: Enterprise Risk, AI Forensics, and Image Security</h2>
     <p><strong>September 15-18, 2026 — University of Twente, The Netherlands</strong></p>
     <p>Held in conjunction with the EDOC conference series</p>
-    <p style="margin-top:20px"><strong>Call for Paper</strong></p>
+    <h2 class="hero-cta-title"><strong><a href="#call-for-papers" class="hero-cta-link">Call for Papers</a></strong></h2>
     <p>Deadline: June 12th, 2026</p>
   </div>
 </section>
+
+<script>
+  (function () {
+    var menu = document.querySelector('.hero-menu');
+    var toggle = document.querySelector('.menu-toggle');
+    var links = document.querySelector('#hero-menu-links');
+
+    if (!menu || !toggle || !links) {
+      return;
+    }
+
+    toggle.addEventListener('click', function () {
+      var isOpen = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    links.addEventListener('click', function (event) {
+      if (event.target.matches('.menu-item')) {
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
 
 <!-- Home / optional intro -->
 <section id="home" class="content-section">
@@ -122,6 +159,7 @@
   <li>Fadi Mohsen – Assistant Professor at University of Groningen, The Netherlands</li>
   <li>Gurinder Singh – Postdoctoral Fellow, Cleveland, Ohio, United States</li>
   <li>I Made Sukarsa – Professor at Udayana University, Indonesia</li>
+  <li>Ali Reza Ghavamipour - Postdoctoral Researcher, Maastricht University, the Netherlands </li>
   <li>Jan-Willem Bullee – Assistant Professor at University of Twente, The Netherlands</li>
   <li>Jayanta Mukhopadhyay – Professor, Indian Institute of Technology, Kharagpur, India</li>
   <li>Kes Greuter – Product Security Manager, Signify, Eindhoven, The Netherlands</li>
