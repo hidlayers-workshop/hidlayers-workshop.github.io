@@ -172,8 +172,44 @@ body {
   text-decoration: underline;
 }
 
+/* Keynote speaker */
+.keynote-speaker {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.keynote-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--border);
+  flex-shrink: 0;
+}
+
+.keynote-bio {
+  flex: 1;
+}
+
+.keynote-bio p:first-child {
+  margin-top: 0;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 760px) {
+  .keynote-speaker {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .keynote-photo {
+    width: 150px;
+    height: 150px;
+  }
+
   .hero-banner {
     justify-content: flex-start;
     padding-top: 6.5rem;
