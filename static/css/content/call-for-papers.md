@@ -36,6 +36,6 @@ EDOC link: https://conf.researchr.org/home/cbi-edoc-2026
 
 ## Important Dates
 
-- Paper submission: TBA
-- Notification: TBA
+- Paper submission: ~~June 12th~~ June 28th
+- Notification of Acceptance: ~~July 17th~~ July 26th
 - Camera-ready: TBA

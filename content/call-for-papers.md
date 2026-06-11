@@ -74,9 +74,9 @@ EDOC link: Explore EDOC
 
 Important Dates
 
-Paper submission: TBA
+Paper submission: ~~June 12th~~ June 28th
 
-Notification: TBA
+Notification of Acceptance: ~~July 17th~~ July 26th
 
 Camera-ready: TBA
 
