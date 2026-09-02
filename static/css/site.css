@@ -172,6 +172,38 @@ body {
   text-decoration: underline;
 }
 
+/* Detailed program */
+.program-schedule {
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+}
+
+.program-row {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.program-row time {
+  color: var(--accent);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.program-break {
+  background: var(--accent-soft);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.program-note {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
 /* Keynote speaker */
 .keynote-speaker {
   display: flex;
@@ -271,6 +303,11 @@ body {
 
   .content-section {
     padding: 1rem;
+  }
+
+  .program-row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
   }
 }
 
